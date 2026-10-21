@@ -139,9 +139,12 @@
     body { padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px)); }
     .nav .wrap { padding-block:16px; }
     .hero { padding-top:92px; }
+    .hero .wrap { position:relative; z-index:1; }
     .lead { font-size:1.55rem; }
     .btns .btn { flex:1 1 100%; text-align:center; }
     .btn { min-height:50px; display:flex; align-items:center; justify-content:center; }
+    .portrait { margin-bottom:0; }
+    .wordmark { position:absolute; left:12px; bottom:0; z-index:3; padding-top:0; font-size:clamp(4.5rem, 24vw, 7rem); line-height:.78; }
     section.block { padding-block:64px; }
     .work li { padding:22px 0; }
     .work li:hover { padding-left:0; }
@@ -179,8 +182,8 @@
   <section class="hero">
     <div class="wrap">
       <div class="intro">
-        <p class="kicker">Laravel developer · Kochi, India</p>
-        <p class="lead">I build dependable Laravel backends and web apps that businesses run on.</p>
+        <p class="kicker">Laravel Developer · Kochi, India</p>
+        <p class="lead">I build reliable backend systems and web applications that help businesses operate with confidence.</p>
         <div class="btns">
           <a class="btn solid" href="Noor_Muhammed_Resume.pdf" download data-track="click_resume">Download resume</a>
           <a class="btn ghost" href="#contact" data-track="click_get_in_touch">Get in touch</a>
@@ -195,20 +198,20 @@
 
   <section class="block" id="about">
     <div class="wrap">
-      <h2>Hi, I’m Noor Muhammed. I build the backends businesses depend on every day.</h2>
+      <h2>I’m Noor Muhammed, a Laravel developer building reliable software for real-world business needs.</h2>
       <div class="about">
         <div>
-          <p>I’m a Laravel developer from Kochi, and I’ve been at Bytekat Technologies since July 2023. I like to break a problem down until the solution is simple, then build it cleanly.</p>
-          <p>Most of my work is REST APIs, fast SQL queries and background jobs on MySQL and Oracle. When a feature needs it, I also build the screens with Angular, Bootstrap and JavaScript.</p>
+          <p>Based in Kochi, I have worked at Bytekat Technologies since July 2023. I focus on understanding requirements, designing practical solutions, and delivering maintainable software.</p>
+          <p>My work includes REST API development, SQL query optimization, and background processing with MySQL and Oracle. I also contribute to front-end features using Angular, Bootstrap, and JavaScript.</p>
         </div>
         <div>
-          <p>I write clean code, debug patiently and learn quickly. I’m happy reviewing code with a team, and I take ownership of what I ship.</p>
+          <p>I value clear, maintainable code, careful debugging, and continuous learning. I collaborate with teammates, contribute to code reviews, and take responsibility for delivering dependable features.</p>
         </div>
       </div>
       <ul class="qualities">
-        <li><strong>Dependable backends</strong><span>REST APIs, optimised SQL and queue jobs for exports and background work.</span></li>
-        <li><strong>Full-stack when needed</strong><span>Laravel and PHP on the server, with Angular, JavaScript and Bootstrap on the front end.</span></li>
-        <li><strong>Trusted with sensitive data</strong><span>Banking and compliance systems where security and API reliability matter most.</span></li>
+        <li><strong>Reliable backend development</strong><span>REST APIs, optimized SQL, and queue-based processing for exports and background tasks.</span></li>
+        <li><strong>Full-stack collaboration</strong><span>Laravel and PHP services, with front-end contributions in Angular, JavaScript, and Bootstrap.</span></li>
+        <li><strong>Experience with sensitive systems</strong><span>Banking and compliance applications that require secure, dependable APIs.</span></li>
       </ul>
       <dl class="facts">
         <div><dt>3+</dt><dd>years as a Laravel developer</dd></div>
@@ -221,7 +224,7 @@
 
   <section class="block stack" id="stack">
     <div class="wrap">
-      <h2>The tools I build with</h2>
+      <h2>Technical skills</h2>
       <dl>
         <div class="row"><dt>Backend</dt><dd><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">REST APIs</span><span class="chip">Python</span></dd></div>
         <div class="row"><dt>Databases</dt><dd><span class="chip">MySQL</span><span class="chip">Oracle DB</span></dd></div>
@@ -232,22 +235,22 @@
 
   <section class="block work" id="work">
     <div class="wrap">
-      <h2>Selected work</h2>
+      <h2>Selected projects</h2>
       <ol>
-        <li><h3>KAU weather system</h3><p>A weather forecasting backend for Kerala Agricultural University. It processes meteorological data and sends farmers simple, timely alerts.</p><div class="tags"><span class="chip">Backend</span><span class="chip">Alerts</span></div></li>
-        <li><h3>FedBCM &amp; FedServe</h3><p>Backend services for banking compliance and management, built with a strong focus on security, API reliability and handling financial data correctly.</p><div class="tags"><span class="chip">Banking</span><span class="chip">Security</span></div></li>
-        <li><h3>RoofTech, Liberty Manager &amp; Scandinavian Supplies</h3><p>Internal ERP and inventory tools for construction and supply companies. They replaced manual workflows and track stock and operations across regions, including Australia.</p><div class="tags"><span class="chip">ERP</span><span class="chip">Inventory</span></div></li>
-        <li><h3>BiteDine Dubai</h3><p>A food takeaway and booking platform for Dubai. I built the Angular front end and the ordering logic, so the path from choosing a meal to checkout stays fast and smooth.</p><div class="tags"><span class="chip">Angular</span><span class="chip">Ordering</span></div></li>
-        <li><h3>B4U Fitness</h3><p>A live fitness tracker where users log workouts, follow their progress in charts and export their data. <a href="https://b4ufitness.hmrg.xyz" target="_blank" rel="noopener" data-track="click_b4u_fitness">Open the live site</a>.</p><div class="tags"><span class="chip">Live</span><span class="chip">Charts</span></div></li>
+        <li><h3>KAU weather system</h3><p>A forecasting backend for Kerala Agricultural University that processes meteorological data and delivers timely alerts to farmers.</p><div class="tags"><span class="chip">Backend</span><span class="chip">Alerts</span></div></li>
+        <li><h3>FedBCM &amp; FedServe</h3><p>Backend services for banking compliance and operations, emphasizing secure financial data handling and reliable APIs.</p><div class="tags"><span class="chip">Banking</span><span class="chip">Security</span></div></li>
+        <li><h3>RoofTech, Liberty Manager &amp; Scandinavian Supplies</h3><p>ERP and inventory applications for construction and supply businesses, supporting stock management and operational workflows across regions, including Australia.</p><div class="tags"><span class="chip">ERP</span><span class="chip">Inventory</span></div></li>
+        <li><h3>BiteDine Dubai</h3><p>A food ordering and booking platform for Dubai. I developed the Angular front end and ordering functionality to support a clear, efficient customer journey.</p><div class="tags"><span class="chip">Angular</span><span class="chip">Ordering</span></div></li>
+        <li><h3>B4U Fitness</h3><p>A fitness tracking application for recording workouts, reviewing progress through charts, and exporting user data. <a href="https://b4ufitness.hmrg.xyz" target="_blank" rel="noopener" data-track="click_b4u_fitness">View the live site</a>.</p><div class="tags"><span class="chip">Live</span><span class="chip">Charts</span></div></li>
       </ol>
     </div>
   </section>
 
   <section class="block stack" id="experience">
     <div class="wrap">
-      <h2>Experience and education</h2>
+      <h2>Experience &amp; education</h2>
       <dl>
-        <div class="row"><dt>Jul 2023 – Present</dt><dd class="text"><strong>Laravel Developer, Bytekat Technologies Private Limited, Aluva</strong><br>I build and maintain Laravel backend modules with clean, reusable code, develop REST APIs, optimise SQL queries in MySQL and Oracle, and run queue jobs for Excel exports. I review code and fix bugs with the team, and work across front end and back end on live features.</dd></div>
+        <div class="row"><dt>Jul 2023 – Present</dt><dd class="text"><strong>Laravel Developer, Bytekat Technologies Private Limited, Aluva</strong><br>Develop and maintain Laravel backend modules and REST APIs; optimize queries across MySQL and Oracle; implement queue-based Excel exports; and collaborate on code reviews, debugging, and full-stack feature delivery.</dd></div>
         <div class="row"><dt>2020 – 2023</dt><dd class="text"><strong>Bachelor of Computer Applications, Al-Ameen College, Aluva</strong></dd></div>
         <div class="row"><dt>Nov 2021</dt><dd class="text"><strong>Python 3.4.3 certificate</strong><br>Spoken Tutorial Project, IIT Bombay, through Al-Ameen College. Covered web scraping and machine learning with Python.</dd></div>
       </dl>
@@ -259,7 +262,7 @@
     <div class="wrap contact-grid">
       <div>
         <h2>Let’s work together.</h2>
-        <p class="sub">Have a role or project in mind? Send a message or reach me directly.</p>
+        <p class="sub">For professional opportunities or project enquiries, please send a message or get in touch directly.</p>
         <a class="mail" href="mailto:noormuhammed12345678@gmail.com" data-track="click_email">noormuhammed12345678@gmail.com</a>
         <p class="phone"><a href="tel:+918137850467" data-track="click_phone">+91 81378 50467</a></p>
         <div class="links">
