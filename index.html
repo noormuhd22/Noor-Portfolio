@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f2bff">
+<meta property="og:title" content="Noor Muhammed · Laravel Developer in Kochi">
+<meta property="og:description" content="Laravel developer building dependable backends, REST APIs and web apps.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2bff'/%3E%3Ctext x='32' y='47' font-size='42' font-weight='800' text-anchor='middle' fill='%23ffd43b' font-family='Arial'%3EN%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add("js")</script>
+<title>Noor Muhammed · Laravel Developer in Kochi</title>
+<meta name="description" content="Noor Muhammed is a Laravel developer in Kochi, India, building REST APIs, backend systems and web apps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cobalt:#1f2bff; --sun:#ffd43b; --ink:#0a0f2c;
+    --bg:#f4f5fb; --text:#0a0f2c; --muted:#4b5170; --line:#cfd3e6; --accent:#1f2bff;
+    --sans:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0a0f2c; --text:#eef0fb; --muted:#a4abcf; --line:#2a3160; --accent:#ffd43b; }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); font-size:1.0625rem; line-height:1.6; }
+  a { color:inherit; }
+  :focus-visible { outline:3px solid var(--sun); outline-offset:3px; }
+  .wrap { width:min(1120px, 100% - 48px); margin-inline:auto; }
+
+  /* Nav */
+  .nav { position:absolute; inset:0 0 auto 0; z-index:5; color:#fff; }
+  .nav .wrap { display:flex; align-items:center; justify-content:space-between; padding-block:22px; gap:16px; }
+  .brand { font-family:var(--mono); font-weight:500; text-decoration:none; }
+  .nav ul { display:flex; gap:26px; list-style:none; margin:0; padding:0; }
+  .nav ul a { text-decoration:none; }
+  .nav ul a:hover { text-decoration:underline; text-underline-offset:6px; }
+  .pill { display:inline-flex; align-items:center; gap:8px; font-size:.875rem; padding:6px 14px; border:1px solid rgba(255,255,255,.5); border-radius:99px; }
+  .pill i { width:8px; height:8px; border-radius:50%; background:var(--sun); }
+
+  /* Hero */
+  .hero { position:relative; background:var(--cobalt); color:#fff; padding-top:120px; overflow:hidden; }
+  .hero .wrap { display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:end; }
+  .intro { padding-bottom:40px; }
+  .intro .kicker { font-family:var(--mono); font-size:.9rem; color:var(--sun); margin:0 0 18px; }
+  .lead { font-size:clamp(1.5rem, 3.2vw, 2.4rem); line-height:1.2; font-weight:600; margin:0 0 28px; max-width:18em; }
+  .btns { display:flex; flex-wrap:wrap; gap:12px; }
+  .btn { display:inline-block; padding:13px 24px; border-radius:99px; font-weight:600; text-decoration:none; border:2px solid var(--sun); transition:background .2s, color .2s; }
+  .btn.solid { background:var(--sun); color:var(--ink); }
+  .btn.solid:hover { background:#fff; border-color:#fff; }
+  .btn.ghost { color:var(--sun); }
+  .btn.ghost:hover { background:var(--sun); color:var(--ink); }
+  .portrait { margin:0; justify-self:end; width:min(380px, 100%); position:relative; z-index:2; margin-bottom:-6vw; }
+  .portrait .frame { background:var(--sun); border-radius:28px 200px 0 0; overflow:hidden; aspect-ratio:700/918; }
+  .portrait img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+  .wordmark { margin:0; font-weight:800; font-size:clamp(6rem, 29vw, 22rem); line-height:.78; letter-spacing:-.04em; color:var(--sun); padding-top:2vw; white-space:nowrap; position:relative; z-index:1; font-variation-settings:"opsz" 96; }
+  .wordmark span { display:inline-block; animation:rise .9s cubic-bezier(.2,.8,.2,1) both; }
+  .wordmark span:nth-child(2) { animation-delay:.08s; }
+  .wordmark span:nth-child(3) { animation-delay:.16s; }
+  .wordmark span:nth-child(4) { animation-delay:.24s; }
+  @keyframes rise { from { transform:translateY(60%); opacity:0; } to { transform:none; opacity:1; } }
+
+  /* Sections */
+  section.block { padding-block:clamp(72px, 11vw, 140px); }
+  h2 { font-size:clamp(2rem, 5vw, 3.6rem); line-height:1.08; letter-spacing:-.02em; margin:0 0 36px; font-weight:800; max-width:16em; }
+  .about { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+  .about p { margin:0 0 1em; max-width:34em; }
+  .qualities { list-style:none; margin:48px 0 0; padding:0; display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+  .qualities li { border-top:3px solid var(--accent); padding-top:14px; }
+  .qualities strong { display:block; font-size:1.2rem; margin-bottom:6px; }
+  .qualities span { color:var(--muted); }
+  .facts { display:flex; flex-wrap:wrap; gap:12px 40px; margin:56px 0 0; padding:0; font-family:var(--mono); font-size:.95rem; }
+  .facts div { display:flex; gap:10px; align-items:baseline; }
+  .facts dt { font-size:1.6rem; font-weight:500; color:var(--accent); }
+  .facts dd { margin:0; color:var(--muted); }
+
+  .stack dl { margin:0; border-top:1px solid var(--line); }
+  .stack .row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:22px 0; border-bottom:1px solid var(--line); }
+  .stack dt { font-weight:600; }
+  .stack dd.text { display:block; }
+  .work a { text-underline-offset:3px; }
+  .stack dd { margin:0; display:flex; flex-wrap:wrap; gap:10px; }
+  .chip { font-family:var(--mono); font-size:.9rem; padding:5px 14px; border:1px solid var(--line); border-radius:99px; }
+
+  .work ol { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+  .work li { display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:baseline; padding:28px 12px; border-bottom:1px solid var(--line); transition:background .2s, padding-left .2s; }
+  .work li:hover { background:var(--cobalt); color:#fff; padding-left:28px; }
+  .work li:hover p, .work li:hover .chip { color:#fff; border-color:rgba(255,255,255,.5); }
+  .work h3 { margin:0; font-size:1.5rem; }
+  .work p { margin:0; color:var(--muted); }
+  .work .tags { display:flex; gap:8px; }
+
+  .contact { background:var(--ink); color:#fff; }
+  .contact h2 { color:#fff; }
+  .mail { display:inline-block; font-size:clamp(1.4rem, 4.5vw, 3rem); font-weight:800; color:var(--sun); text-decoration:none; border-bottom:3px solid var(--sun); margin-bottom:36px; word-break:break-all; }
+  .mail:hover { background:var(--sun); color:var(--ink); }
+  .links { display:flex; gap:24px; flex-wrap:wrap; font-family:var(--mono); }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+  .contact .sub { color:#c3c8e6; max-width:26em; margin:0 0 28px; }
+  .contact .mail { font-size:clamp(1.1rem, 2.4vw, 1.6rem); margin-bottom:22px; }
+  .contact .phone { margin:0 0 28px; font-family:var(--mono); }
+  .form { display:grid; gap:18px; }
+  .form label { display:block; font-weight:600; margin-bottom:6px; }
+  .form input, .form textarea { width:100%; font:inherit; color:#fff; background:#141a45; border:1px solid #3a4285; border-radius:10px; padding:12px 14px; }
+  .form button { justify-self:start; cursor:pointer; font:inherit; font-weight:600; }
+  .form button:disabled { opacity:.6; cursor:wait; }
+  #formMsg { margin:0; color:var(--sun); min-height:1.5em; }
+  .hp { position:absolute; left:-9999px; }
+  @media (max-width:820px) { .contact-grid { grid-template-columns:1fr; gap:40px; } }
+  .btn.cobalt { background:var(--cobalt); color:#fff; border-color:var(--cobalt); }
+  .btn.cobalt:hover { background:var(--ink); border-color:var(--ink); }
+  .dl { margin:36px 0 0; }
+  .js .reveal { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+  .js .reveal.in { opacity:1; transform:none; }
+  .dock { display:none; }
+  footer { background:var(--ink); color:#a4abcf; font-family:var(--mono); font-size:.85rem; padding:28px 0; border-top:1px solid #2a3160; }
+
+  /* Location dialog */
+  dialog { border:0; border-radius:20px; padding:32px; width:min(440px, calc(100% - 32px)); background:var(--bg); color:var(--text); }
+  dialog::backdrop { background:rgba(10,15,44,.7); }
+  dialog h2 { font-size:1.7rem; margin:0 0 12px; }
+  dialog p { margin:0 0 12px; color:var(--muted); }
+  dialog .btns { margin-top:22px; }
+  dialog .btn.solid { background:var(--cobalt); color:#fff; border-color:var(--cobalt); }
+  dialog .btn.ghost { color:var(--text); border-color:var(--line); }
+  dialog .btn.ghost:hover { background:var(--line); }
+
+  @media (max-width:820px) {
+    .nav ul { display:none; }
+    .hero .wrap { grid-template-columns:1fr; }
+    .portrait { justify-self:start; width:min(300px, 80%); margin-bottom:-10vw; }
+    .about, .qualities { grid-template-columns:1fr; }
+    .stack .row { grid-template-columns:1fr; gap:10px; }
+    .work li { grid-template-columns:1fr; gap:8px; }
+  }
+  @media (max-width:820px) {
+    body { padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px)); }
+    .nav .wrap { padding-block:16px; }
+    .hero { padding-top:92px; }
+    .lead { font-size:1.55rem; }
+    .btns .btn { flex:1 1 100%; text-align:center; }
+    .btn { min-height:50px; display:flex; align-items:center; justify-content:center; }
+    section.block { padding-block:64px; }
+    .work li { padding:22px 0; }
+    .work li:hover { padding-left:0; }
+    .facts { gap:18px 28px; }
+    .dock { display:flex; position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom, 0px)); gap:6px; padding:6px; background:rgba(10,15,44,.94); border:1px solid #2a3160; border-radius:99px; z-index:15; }
+    .dock a { flex:1; min-height:46px; display:flex; align-items:center; justify-content:center; border-radius:99px; text-decoration:none; color:#fff; font-weight:600; }
+    .dock a.main { background:var(--sun); color:var(--ink); }
+    .dock.hide { display:none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity:1; transform:none; transition:none; }
+    html { scroll-behavior:auto; }
+    .wordmark span { animation:none; }
+    .work li, .btn { transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">~/noorreal</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="pill"><i></i>Open to work</span>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="intro">
+        <p class="kicker">Laravel developer · Kochi, India</p>
+        <p class="lead">I build dependable Laravel backends and web apps that businesses run on.</p>
+        <div class="btns">
+          <a class="btn solid" href="Noor_Muhammed_Resume.pdf" download data-track="click_resume">Download resume</a>
+          <a class="btn ghost" href="#contact" data-track="click_get_in_touch">Get in touch</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <div class="frame"><img src="noor.png" alt="Portrait of Noor Muhammed in a grey blazer, smiling" width="700" height="918"></div>
+      </figure>
+    </div>
+    <h1 class="wordmark" aria-label="Noor"><span aria-hidden="true">N</span><span aria-hidden="true">o</span><span aria-hidden="true">o</span><span aria-hidden="true">r</span></h1>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <h2>Hi, I’m Noor Muhammed. I build the backends businesses depend on every day.</h2>
+      <div class="about">
+        <div>
+          <p>I’m a Laravel developer from Kochi, and I’ve been at Bytekat Technologies since July 2023. I like to break a problem down until the solution is simple, then build it cleanly.</p>
+          <p>Most of my work is REST APIs, fast SQL queries and background jobs on MySQL and Oracle. When a feature needs it, I also build the screens with Angular, Bootstrap and JavaScript.</p>
+        </div>
+        <div>
+          <p>I write clean code, debug patiently and learn quickly. I’m happy reviewing code with a team, and I take ownership of what I ship.</p>
+        </div>
+      </div>
+      <ul class="qualities">
+        <li><strong>Dependable backends</strong><span>REST APIs, optimised SQL and queue jobs for exports and background work.</span></li>
+        <li><strong>Full-stack when needed</strong><span>Laravel and PHP on the server, with Angular, JavaScript and Bootstrap on the front end.</span></li>
+        <li><strong>Trusted with sensitive data</strong><span>Banking and compliance systems where security and API reliability matter most.</span></li>
+      </ul>
+      <dl class="facts">
+        <div><dt>3+</dt><dd>years as a Laravel developer</dd></div>
+        <div><dt>5</dt><dd>featured projects</dd></div>
+        <div><dt>2</dt><dd>databases: MySQL, Oracle</dd></div>
+        <div><dt>3</dt><dd>languages: English, Malayalam, Hindi</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block stack" id="stack">
+    <div class="wrap">
+      <h2>The tools I build with</h2>
+      <dl>
+        <div class="row"><dt>Backend</dt><dd><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">REST APIs</span><span class="chip">Python</span></dd></div>
+        <div class="row"><dt>Databases</dt><dd><span class="chip">MySQL</span><span class="chip">Oracle DB</span></dd></div>
+        <div class="row"><dt>Front end</dt><dd><span class="chip">Angular</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Bootstrap</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block work" id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <ol>
+        <li><h3>KAU weather system</h3><p>A weather forecasting backend for Kerala Agricultural University. It processes meteorological data and sends farmers simple, timely alerts.</p><div class="tags"><span class="chip">Backend</span><span class="chip">Alerts</span></div></li>
+        <li><h3>FedBCM &amp; FedServe</h3><p>Backend services for banking compliance and management, built with a strong focus on security, API reliability and handling financial data correctly.</p><div class="tags"><span class="chip">Banking</span><span class="chip">Security</span></div></li>
+        <li><h3>RoofTech, Liberty Manager &amp; Scandinavian Supplies</h3><p>Internal ERP and inventory tools for construction and supply companies. They replaced manual workflows and track stock and operations across regions, including Australia.</p><div class="tags"><span class="chip">ERP</span><span class="chip">Inventory</span></div></li>
+        <li><h3>BiteDine Dubai</h3><p>A food takeaway and booking platform for Dubai. I built the Angular front end and the ordering logic, so the path from choosing a meal to checkout stays fast and smooth.</p><div class="tags"><span class="chip">Angular</span><span class="chip">Ordering</span></div></li>
+        <li><h3>B4U Fitness</h3><p>A live fitness tracker where users log workouts, follow their progress in charts and export their data. <a href="https://b4ufitness.hmrg.xyz" target="_blank" rel="noopener" data-track="click_b4u_fitness">Open the live site</a>.</p><div class="tags"><span class="chip">Live</span><span class="chip">Charts</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block stack" id="experience">
+    <div class="wrap">
+      <h2>Experience and education</h2>
+      <dl>
+        <div class="row"><dt>Jul 2023 – Present</dt><dd class="text"><strong>Laravel Developer, Bytekat Technologies Private Limited, Aluva</strong><br>I build and maintain Laravel backend modules with clean, reusable code, develop REST APIs, optimise SQL queries in MySQL and Oracle, and run queue jobs for Excel exports. I review code and fix bugs with the team, and work across front end and back end on live features.</dd></div>
+        <div class="row"><dt>2020 – 2023</dt><dd class="text"><strong>Bachelor of Computer Applications, Al-Ameen College, Aluva</strong></dd></div>
+        <div class="row"><dt>Nov 2021</dt><dd class="text"><strong>Python 3.4.3 certificate</strong><br>Spoken Tutorial Project, IIT Bombay, through Al-Ameen College. Covered web scraping and machine learning with Python.</dd></div>
+      </dl>
+      <p class="dl"><a class="btn cobalt" href="Noor_Muhammed_Resume.pdf" download data-track="click_resume_experience">Download resume (PDF)</a></p>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Let’s work together.</h2>
+        <p class="sub">Have a role or project in mind? Send a message or reach me directly.</p>
+        <a class="mail" href="mailto:noormuhammed12345678@gmail.com" data-track="click_email">noormuhammed12345678@gmail.com</a>
+        <p class="phone"><a href="tel:+918137850467" data-track="click_phone">+91 81378 50467</a></p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/noormuhd/" target="_blank" rel="noopener" data-track="click_linkedin">LinkedIn</a>
+          <a href="https://github.com/noormuhd001" target="_blank" rel="noopener" data-track="click_github">GitHub</a>
+        </div>
+      </div>
+      <form class="form" id="contactForm">
+        <div><label for="fullname">Your name</label><input id="fullname" name="fullname" autocomplete="name" required maxlength="100"></div>
+        <div><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="150"></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required maxlength="1500"></textarea></div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn solid" type="submit">Send message</button>
+        <p id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">&lt;/&gt; made by Noor · 2026</div></footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <a href="#work">Work</a>
+  <a class="main" href="Noor_Muhammed_Resume.pdf" download data-track="click_resume_dock">Resume</a>
+  <a href="#contact" data-track="click_contact_dock">Contact</a>
+</nav>
+
+<dialog id="locDialog" aria-labelledby="locTitle">
+  <h2 id="locTitle">Share your location?</h2>
+  <p>This site records each visit in a Google Sheet, including your IP address.</p>
+  <p>If you allow it, your browser will also share your exact location so Noor can see where visitors come from. This is optional.</p>
+  <div class="btns">
+    <button class="btn solid" id="allowLoc" type="button">Allow location</button>
+    <button class="btn ghost" id="skipLoc" type="button">Not now</button>
+  </div>
+</dialog>
+
+<script>
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbznEddWNka2bjw7Z0RTvJj8VB8xsZec0G2BxHVRRUktHbYCpgURI9l2wE-5sToaBHLdzw/exec";
+  const dialog = document.getElementById("locDialog");
+  let geo = {};
+
+  // IP address and approximate location, looked up once per visit
+  async function getIpInfo() {
+    try { const c = sessionStorage.getItem("ipinfo"); if (c) return JSON.parse(c); } catch (e) {}
+    try {
+      const j = await (await fetch("https://ipapi.co/json/")).json();
+      const info = { ip: j.ip || "", city: j.city || "", region: j.region || "", country: j.country_name || "" };
+      try { sessionStorage.setItem("ipinfo", JSON.stringify(info)); } catch (e) {}
+      return info;
+    } catch (e) { return { ip: "", city: "", region: "", country: "" }; }
+  }
+
+  async function send(eventName, note, extra) {
+    const i = await getIpInfo();
+    return fetch(SHEET_URL, {
+      method: "POST", mode: "no-cors", keepalive: true,
+      body: JSON.stringify({
+        event: eventName, note: note || "",
+        page: location.href,
+        ip: i.ip, ipCity: i.city, ipRegion: i.region, ipCountry: i.country,
+        lat: geo.lat, lng: geo.lng, accuracy: geo.accuracy, place: geo.place, ...(extra || {})
+      })
+    }).catch(() => {});
+  }
+
+  async function placeName(lat, lng) {
+    try {
+      const u = "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=" + lat + "&longitude=" + lng + "&localityLanguage=en";
+      const j = await (await fetch(u)).json();
+      return [j.locality || j.city, j.principalSubdivision, j.countryName].filter(Boolean).join(", ");
+    } catch (e) { return ""; }
+  }
+
+  // Triggers the browser's own location permission popup
+  function askLocation() {
+    if (!navigator.geolocation) { send("location_unavailable"); return; }
+    navigator.geolocation.getCurrentPosition(async (pos) => {
+      geo = { lat: pos.coords.latitude, lng: pos.coords.longitude, accuracy: Math.round(pos.coords.accuracy) };
+      geo.place = await placeName(geo.lat, geo.lng);
+      send("location_shared");
+    }, (err) => {
+      send(err.code === 1 ? "location_denied" : "location_error", err.message);
+    }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+  }
+
+  // On page load: log the visit with IP, then ask for location permission
+  send("page_visit");
+  (async function () {
+    let state = "prompt";
+    try { state = (await navigator.permissions.query({ name: "geolocation" })).state; } catch (e) {}
+    if (state === "granted") { askLocation(); }
+    else if (state === "denied") { send("location_denied", "blocked in browser settings"); }
+    else if (dialog.showModal) { dialog.showModal(); document.getElementById("allowLoc").focus(); }
+    else { askLocation(); }
+  })();
+
+  document.getElementById("allowLoc").addEventListener("click", () => { dialog.close(); askLocation(); });
+  document.getElementById("skipLoc").addEventListener("click", () => { dialog.close(); send("location_declined"); });
+  dialog.addEventListener("cancel", () => { send("location_declined", "dialog dismissed"); });
+
+  // Contact form: saves name, email and message to the sheet
+  const form = document.getElementById("contactForm");
+  const formMsg = document.getElementById("formMsg");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = form.elements;
+    if (f.website.value) return;
+    const btn = form.querySelector("button");
+    btn.disabled = true; btn.textContent = "Sending…";
+    await send("contact_form", "", {
+      name: f.fullname.value.trim(), email: f.email.value.trim(), message: f.message.value.trim()
+    });
+    form.reset();
+    btn.disabled = false; btn.textContent = "Send message";
+    formMsg.textContent = "Thanks, your message has been sent.";
+  });
+
+  // Hide the mobile bar while typing in the form
+  const dock = document.getElementById("dock");
+  document.addEventListener("focusin", (e) => { if (e.target.matches("input, textarea")) dock.classList.add("hide"); });
+  document.addEventListener("focusout", () => dock.classList.remove("hide"));
+
+  // Gentle fade-in as sections scroll into view
+  const blocks = document.querySelectorAll("section.block .wrap");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    blocks.forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+  }
+
+  // Log clicks on buttons and links marked with data-track
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest("[data-track]");
+    if (el) send(el.dataset.track);
+  });
+</script>
+</body>
+</html>
