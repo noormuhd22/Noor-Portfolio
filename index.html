@@ -150,8 +150,10 @@
     .work li:hover { padding-left:0; }
     .facts { gap:18px 28px; }
     .dock { display:flex; position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom, 0px)); gap:6px; padding:6px; background:rgba(10,15,44,.94); border:1px solid #2a3160; border-radius:99px; z-index:15; }
-    .dock a { flex:1; min-height:46px; display:flex; align-items:center; justify-content:center; border-radius:99px; text-decoration:none; color:#fff; font-weight:600; }
+    .dock a { flex:1; min-height:46px; display:flex; align-items:center; justify-content:center; border-radius:99px; text-decoration:none; color:#fff; font-weight:600; transition:background .2s, color .2s, box-shadow .2s; }
     .dock a.main { background:var(--sun); color:var(--ink); }
+    .dock a.is-active { color:var(--sun); }
+    .dock a:active { transform:scale(.97); }
     .dock.hide { display:none; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -385,6 +387,29 @@
   const dock = document.getElementById("dock");
   document.addEventListener("focusin", (e) => { if (e.target.matches("input, textarea")) dock.classList.add("hide"); });
   document.addEventListener("focusout", () => dock.classList.remove("hide"));
+
+  // Highlight the mobile dock link for the section currently in view.
+  const dockSections = ["work", "contact"].map((id) => ({
+    section: document.getElementById(id),
+    link: dock.querySelector(`a[href="#${id}"]`)
+  }));
+  if ("IntersectionObserver" in window) {
+    const dockObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        dockSections.forEach(({ link }) => {
+          link.classList.remove("is-active");
+          link.removeAttribute("aria-current");
+        });
+        const current = dockSections.find(({ section }) => section === entry.target);
+        if (current) {
+          current.link.classList.add("is-active");
+          current.link.setAttribute("aria-current", "location");
+        }
+      });
+    }, { rootMargin:"-45% 0px -45% 0px", threshold:0 });
+    dockSections.forEach(({ section }) => dockObserver.observe(section));
+  }
 
   // Gentle fade-in as sections scroll into view
   const blocks = document.querySelectorAll("section.block .wrap");
