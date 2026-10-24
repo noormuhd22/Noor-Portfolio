@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1f2bff">
+<meta name="theme-color" content="#111827">
 <meta property="og:title" content="Noor Muhammed · Laravel Developer in Kochi">
 <meta property="og:description" content="Laravel developer building dependable backends, REST APIs and web apps.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2bff'/%3E%3Ctext x='32' y='47' font-size='42' font-weight='800' text-anchor='middle' fill='%23ffd43b' font-family='Arial'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Ctext x='32' y='47' font-size='42' font-weight='800' text-anchor='middle' fill='%23c7f464' font-family='Arial'%3EN%3C/text%3E%3C/svg%3E">
 <script>document.documentElement.classList.add("js")</script>
 <title>Noor Muhammed · Laravel Developer in Kochi</title>
 <meta name="description" content="Noor Muhammed is a Laravel developer in Kochi, India, building REST APIs, backend systems and web apps.">
@@ -15,19 +15,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cobalt:#1f2bff; --sun:#ffd43b; --ink:#0a0f2c;
-    --bg:#f4f5fb; --text:#0a0f2c; --muted:#4b5170; --line:#cfd3e6; --accent:#1f2bff;
+    --primary:#111827; --warm:#c7f464; --ink:#0b1020;
+    --bg:#f5f6f1; --text:#172033; --muted:#5c6678; --line:#dce1d6; --accent:#537b20;
+    --eye-white:#f5f6f1;
     --sans:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
     --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#0a0f2c; --text:#eef0fb; --muted:#a4abcf; --line:#2a3160; --accent:#ffd43b; }
+    :root { --bg:#0d1420; --text:#edf1e7; --muted:#aab4a5; --line:#303b3d; --accent:#c7f464; --eye-white:#f5f6f1; }
   }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body { margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); font-size:1.0625rem; line-height:1.6; }
   a { color:inherit; }
-  :focus-visible { outline:3px solid var(--sun); outline-offset:3px; }
+  :focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
   .wrap { width:min(1120px, 100% - 48px); margin-inline:auto; }
 
   /* Nav */
@@ -38,29 +39,34 @@
   .nav ul a { text-decoration:none; }
   .nav ul a:hover { text-decoration:underline; text-underline-offset:6px; }
   .pill { display:inline-flex; align-items:center; gap:8px; font-size:.875rem; padding:6px 14px; border:1px solid rgba(255,255,255,.5); border-radius:99px; }
-  .pill i { width:8px; height:8px; border-radius:50%; background:var(--sun); }
+  .pill i { width:8px; height:8px; border-radius:50%; background:var(--warm); box-shadow:0 0 12px rgba(199,244,100,.7); }
 
   /* Hero */
-  .hero { position:relative; background:var(--cobalt); color:#fff; padding-top:120px; overflow:hidden; }
+  .hero { position:relative; background-color:var(--primary); background-image:radial-gradient(ellipse at 76% 36%, rgba(199,244,100,.12), transparent 27rem); color:#fff; padding-top:120px; overflow:hidden; }
   .hero .wrap { display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:end; }
   .intro { padding-bottom:40px; }
-  .intro .kicker { font-family:var(--mono); font-size:.9rem; color:var(--sun); margin:0 0 18px; }
+  .intro .kicker { font-family:var(--mono); font-size:.9rem; color:var(--warm); margin:0 0 18px; }
   .lead { font-size:clamp(1.5rem, 3.2vw, 2.4rem); line-height:1.2; font-weight:600; margin:0 0 28px; max-width:18em; }
   .btns { display:flex; flex-wrap:wrap; gap:12px; }
-  .btn { display:inline-block; padding:13px 24px; border-radius:99px; font-weight:600; text-decoration:none; border:2px solid var(--sun); transition:background .2s, color .2s; }
-  .btn.solid { background:var(--sun); color:var(--ink); }
-  .btn.solid:hover { background:#fff; border-color:#fff; }
-  .btn.ghost { color:var(--sun); }
-  .btn.ghost:hover { background:var(--sun); color:var(--ink); }
+  .btn { display:inline-block; padding:13px 24px; border-radius:99px; font-weight:600; text-decoration:none; border:2px solid var(--warm); transition:background .2s, color .2s; }
+  .btn.solid { background:var(--warm); color:var(--ink); }
+  .btn.solid:hover { background:#e3ffac; border-color:#e3ffac; }
+  .btn.ghost { color:var(--warm); }
+  .btn.ghost:hover { background:var(--warm); color:var(--ink); }
   .portrait { margin:0; justify-self:end; width:min(380px, 100%); position:relative; z-index:2; margin-bottom:-6vw; }
-  .portrait .frame { background:var(--sun); border-radius:28px 200px 0 0; overflow:hidden; aspect-ratio:700/918; }
+  .portrait .frame { background:var(--warm); border-radius:28px 200px 0 0; overflow:hidden; aspect-ratio:700/918; }
   .portrait img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
-  .wordmark { margin:0; font-weight:800; font-size:clamp(6rem, 29vw, 22rem); line-height:.78; letter-spacing:-.04em; color:var(--sun); padding-top:2vw; white-space:nowrap; position:relative; z-index:1; font-variation-settings:"opsz" 96; }
-  .wordmark span { display:inline-block; animation:rise .9s cubic-bezier(.2,.8,.2,1) both; }
-  .wordmark span:nth-child(2) { animation-delay:.08s; }
-  .wordmark span:nth-child(3) { animation-delay:.16s; }
-  .wordmark span:nth-child(4) { animation-delay:.24s; }
+  .wordmark { margin:0; font-weight:800; font-size:clamp(6rem, 29vw, 22rem); line-height:.78; letter-spacing:-.04em; color:var(--warm); padding-top:2vw; white-space:nowrap; position:relative; z-index:1; font-variation-settings:"opsz" 96; }
+  .wordmark > span { display:inline-block; animation:rise .9s cubic-bezier(.2,.8,.2,1) both; }
+  .wordmark > span:nth-child(2) { animation-delay:.08s; }
+  .wordmark > span:nth-child(3) { animation-delay:.16s; }
+  .wordmark > span:nth-child(4) { animation-delay:.24s; }
+  .wordmark .eye-letter { width:.52em; height:.52em; margin-inline:.015em; vertical-align:.01em; position:relative; border-radius:50%; background:var(--eye-white); }
+  .eye-letter .eye { position:absolute; inset:0; border-radius:50%; background:var(--eye-white); transform-origin:center; animation:blink 5s ease-in-out infinite; }
+  .wordmark > .eye-letter:nth-child(3) .eye { animation-delay:2.5s; }
+  .eye-letter .pupil { position:absolute; left:50%; top:50%; width:39%; height:39%; border-radius:50%; background:var(--ink); transform:translate(calc(-50% + var(--pupil-x, 0px)), calc(-50% + var(--pupil-y, 0px))); transition:transform .12s ease-out; }
   @keyframes rise { from { transform:translateY(60%); opacity:0; } to { transform:none; opacity:1; } }
+  @keyframes blink { 0%, 45%, 49%, 100% { transform:scaleY(1); } 47% { transform:scaleY(.08); } }
 
   /* Sections */
   section.block { padding-block:clamp(72px, 11vw, 140px); }
@@ -86,44 +92,44 @@
 
   .work ol { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
   .work li { display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:baseline; padding:28px 12px; border-bottom:1px solid var(--line); transition:background .2s, padding-left .2s; }
-  .work li:hover { background:var(--cobalt); color:#fff; padding-left:28px; }
-  .work li:hover p, .work li:hover .chip { color:#fff; border-color:rgba(255,255,255,.5); }
+  .work li:hover { background:var(--warm); color:var(--ink); padding-left:28px; }
+  .work li:hover p, .work li:hover .chip { color:var(--ink); border-color:rgba(11,16,32,.35); }
   .work h3 { margin:0; font-size:1.5rem; }
   .work p { margin:0; color:var(--muted); }
   .work .tags { display:flex; gap:8px; }
 
   .contact { background:var(--ink); color:#fff; }
   .contact h2 { color:#fff; }
-  .mail { display:inline-block; font-size:clamp(1.4rem, 4.5vw, 3rem); font-weight:800; color:var(--sun); text-decoration:none; border-bottom:3px solid var(--sun); margin-bottom:36px; word-break:break-all; }
-  .mail:hover { background:var(--sun); color:var(--ink); }
+  .mail { display:inline-block; font-size:clamp(1.4rem, 4.5vw, 3rem); font-weight:800; color:var(--warm); text-decoration:none; border-bottom:3px solid var(--warm); margin-bottom:36px; word-break:break-all; }
+  .mail:hover { background:var(--warm); color:var(--ink); }
   .links { display:flex; gap:24px; flex-wrap:wrap; font-family:var(--mono); }
   .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-  .contact .sub { color:#c3c8e6; max-width:26em; margin:0 0 28px; }
+  .contact .sub { color:#b9c1b1; max-width:26em; margin:0 0 28px; }
   .contact .mail { font-size:clamp(1.1rem, 2.4vw, 1.6rem); margin-bottom:22px; }
   .contact .phone { margin:0 0 28px; font-family:var(--mono); }
   .form { display:grid; gap:18px; }
   .form label { display:block; font-weight:600; margin-bottom:6px; }
-  .form input, .form textarea { width:100%; font:inherit; color:#fff; background:#141a45; border:1px solid #3a4285; border-radius:10px; padding:12px 14px; }
+  .form input, .form textarea { width:100%; font:inherit; color:#fff; background:#151e30; border:1px solid #3a4654; border-radius:10px; padding:12px 14px; }
   .form button { justify-self:start; cursor:pointer; font:inherit; font-weight:600; }
   .form button:disabled { opacity:.6; cursor:wait; }
-  #formMsg { margin:0; color:var(--sun); min-height:1.5em; }
+  #formMsg { margin:0; color:var(--warm); min-height:1.5em; }
   .hp { position:absolute; left:-9999px; }
   @media (max-width:820px) { .contact-grid { grid-template-columns:1fr; gap:40px; } }
-  .btn.cobalt { background:var(--cobalt); color:#fff; border-color:var(--cobalt); }
+  .btn.cobalt { background:var(--primary); color:#fff; border-color:var(--primary); }
   .btn.cobalt:hover { background:var(--ink); border-color:var(--ink); }
   .dl { margin:36px 0 0; }
   .js .reveal { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
   .js .reveal.in { opacity:1; transform:none; }
   .dock { display:none; }
-  footer { background:var(--ink); color:#a4abcf; font-family:var(--mono); font-size:.85rem; padding:28px 0; border-top:1px solid #2a3160; }
+  footer { background:var(--ink); color:#aab4a5; font-family:var(--mono); font-size:.85rem; padding:28px 0; border-top:1px solid #303b3d; }
 
   /* Location dialog */
   dialog { border:0; border-radius:20px; padding:32px; width:min(440px, calc(100% - 32px)); background:var(--bg); color:var(--text); }
-  dialog::backdrop { background:rgba(10,15,44,.7); }
+  dialog::backdrop { background:rgba(16,42,54,.7); }
   dialog h2 { font-size:1.7rem; margin:0 0 12px; }
   dialog p { margin:0 0 12px; color:var(--muted); }
   dialog .btns { margin-top:22px; }
-  dialog .btn.solid { background:var(--cobalt); color:#fff; border-color:var(--cobalt); }
+  dialog .btn.solid { background:var(--primary); color:#fff; border-color:var(--primary); }
   dialog .btn.ghost { color:var(--text); border-color:var(--line); }
   dialog .btn.ghost:hover { background:var(--line); }
 
@@ -134,6 +140,9 @@
     .about, .qualities { grid-template-columns:1fr; }
     .stack .row { grid-template-columns:1fr; gap:10px; }
     .work li { grid-template-columns:1fr; gap:8px; }
+  }
+  @media (min-width:821px) {
+    .wordmark { font-size:clamp(6rem, 18vw, 15rem); padding-left:max(24px, calc((100vw - 1120px) / 2)); }
   }
   @media (max-width:820px) {
     body { padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px)); }
@@ -149,10 +158,10 @@
     .work li { padding:22px 0; }
     .work li:hover { padding-left:0; }
     .facts { gap:18px 28px; }
-    .dock { display:flex; position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom, 0px)); gap:6px; padding:6px; background:rgba(10,15,44,.94); border:1px solid #2a3160; border-radius:99px; z-index:15; }
+    .dock { display:flex; position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom, 0px)); gap:6px; padding:6px; background:rgba(11,16,32,.96); border:1px solid #3a4654; border-radius:99px; z-index:15; }
     .dock a { flex:1; min-height:46px; display:flex; align-items:center; justify-content:center; border-radius:99px; text-decoration:none; color:#fff; font-weight:600; transition:background .2s, color .2s, box-shadow .2s; }
-    .dock a.main { background:var(--sun); color:var(--ink); }
-    .dock a.is-active { color:var(--sun); }
+    .dock a.main { background:var(--warm); color:var(--ink); }
+    .dock a.is-active { color:var(--warm); }
     .dock a:active { transform:scale(.97); }
     .dock.hide { display:none; }
   }
@@ -160,6 +169,8 @@
     .js .reveal { opacity:1; transform:none; transition:none; }
     html { scroll-behavior:auto; }
     .wordmark span { animation:none; }
+    .eye-letter .eye { animation:none; }
+    .eye-letter .pupil { transition:none; }
     .work li, .btn { transition:none; }
   }
 </style>
@@ -195,7 +206,7 @@
         <div class="frame"><img src="noor.webp" alt="Portrait of Noor Muhammed in a grey blazer, smiling" width="700" height="918"></div>
       </figure>
     </div>
-    <h1 class="wordmark" aria-label="Noor"><span aria-hidden="true">N</span><span aria-hidden="true">o</span><span aria-hidden="true">o</span><span aria-hidden="true">r</span></h1>
+    <h1 class="wordmark" aria-label="Noor"><span aria-hidden="true">N</span><span class="eye-letter" aria-hidden="true"><span class="eye"><span class="pupil"></span></span></span><span class="eye-letter" aria-hidden="true"><span class="eye"><span class="pupil"></span></span></span><span aria-hidden="true">r</span></h1>
   </section>
 
   <section class="block" id="about">
@@ -219,7 +230,7 @@
         <div><dt>3+</dt><dd>years as a Laravel developer</dd></div>
         <div><dt>5</dt><dd>featured projects</dd></div>
         <div><dt>2</dt><dd>databases: MySQL, Oracle</dd></div>
-        <div><dt>3</dt><dd>languages: English, Malayalam, Hindi</dd></div>
+        <!-- <div><dt>3</dt><dd>languages: English, Malayalam, Hindi</dd></div> -->
       </dl>
     </div>
   </section>
@@ -292,6 +303,7 @@
   <a href="#contact" data-track="click_contact_dock">Contact</a>
 </nav>
 
+<!--
 <dialog id="locDialog" aria-labelledby="locTitle">
   <h2 id="locTitle">Share your location?</h2>
   <p>This site records each visit in a Google Sheet, including your IP address.</p>
@@ -301,11 +313,23 @@
     <button class="btn ghost" id="skipLoc" type="button">Not now</button>
   </div>
 </dialog>
+-->
 
 <script>
   const SHEET_URL = "https://script.google.com/macros/s/AKfycbznEddWNka2bjw7Z0RTvJj8VB8xsZec0G2BxHVRRUktHbYCpgURI9l2wE-5sToaBHLdzw/exec";
-  const dialog = document.getElementById("locDialog");
-  let geo = {};
+
+  const eyes = document.querySelectorAll(".eye-letter");
+  document.addEventListener("pointermove", (event) => {
+    eyes.forEach((eye) => {
+      const bounds = eye.getBoundingClientRect();
+      const dx = event.clientX - (bounds.left + bounds.width / 2);
+      const dy = event.clientY - (bounds.top + bounds.height / 2);
+      const angle = Math.atan2(dy, dx);
+      const distance = Math.min(Math.hypot(dx, dy), bounds.width * 0.12);
+      eye.style.setProperty("--pupil-x", `${Math.cos(angle) * distance}px`);
+      eye.style.setProperty("--pupil-y", `${Math.sin(angle) * distance}px`);
+    });
+  });
 
   // IP address and approximate location, looked up once per visit
   async function getIpInfo() {
@@ -326,11 +350,13 @@
         event: eventName, note: note || "",
         page: location.href,
         ip: i.ip, ipCity: i.city, ipRegion: i.region, ipCountry: i.country,
-        lat: geo.lat, lng: geo.lng, accuracy: geo.accuracy, place: geo.place, ...(extra || {})
+        ...(extra || {})
       })
     }).catch(() => {});
   }
 
+  /*
+  Location permission is temporarily disabled.
   async function placeName(lat, lng) {
     try {
       const u = "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=" + lat + "&longitude=" + lng + "&localityLanguage=en";
@@ -351,7 +377,10 @@
     }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
   }
 
-  // On page load: log the visit with IP, then ask for location permission
+  // Ask for location only after the visitor permits it.
+  const dialog = document.getElementById("locDialog");
+  let geo = {};
+
   send("page_visit");
   (async function () {
     let state = "prompt";
@@ -365,6 +394,9 @@
   document.getElementById("allowLoc").addEventListener("click", () => { dialog.close(); askLocation(); });
   document.getElementById("skipLoc").addEventListener("click", () => { dialog.close(); send("location_declined"); });
   dialog.addEventListener("cancel", () => { send("location_declined", "dialog dismissed"); });
+  */
+
+  send("page_visit");
 
   // Contact form: saves name, email and message to the sheet
   const form = document.getElementById("contactForm");
